@@ -14,6 +14,11 @@
       <artifactId>bygg</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>bygg-test-plugin</groupId>
+      <artifactId>bygg-test-plugin</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
 </project>

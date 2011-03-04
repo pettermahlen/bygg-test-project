@@ -15,7 +15,7 @@ import com.pettermahlen.bygg.configuration.Artifact;
  * @since 04/03/2011
  */
 public class ProjectArtifacts implements Artifact {
-    public static final ProjectArtifacts GUAVA = new ProjectArtifacts("com.google.guava", "guava");
+    public static final ProjectArtifacts BYGG_TEST_PLUGIN = new ProjectArtifacts("bygg-test-plugin", "bygg-test-plugin");
     public static final ProjectArtifacts GUICE = new ProjectArtifacts("com.google.inject", "guice");
 
     private final String groupId;

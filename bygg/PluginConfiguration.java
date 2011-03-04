@@ -18,7 +18,7 @@ import java.util.List;
 public class PluginConfiguration {
     public static Plugins plugins() {
         final List artifactVersions = ImmutableList.builder()
-                .add(new ArtifactVersion(ProjectArtifacts.GUAVA, "r08"))
+                .add(new ArtifactVersion(ProjectArtifacts.BYGG_TEST_PLUGIN, "1.0-SNAPSHOT"))
                 .add(new ArtifactVersion(ProjectArtifacts.GUICE, "2.0"))
                 .build();
 

@@ -5,6 +5,7 @@
 
 import com.pettermahlen.bygg.configuration.ByggConfiguration;
 import com.pettermahlen.bygg.execution.TargetDAG;
+import com.pettermahlen.byggTestPlugin.ByggTestPlugin;
 
 /**
  * TODO: document this class!
@@ -16,7 +17,9 @@ public class Configuration {
     public static ByggConfiguration configuration() {
         return new ByggConfiguration() {
             public TargetDAG getTargetDAG() {
-                return TargetDAG.DEFAULT;
+                // TODO: fix Janino-varargs-hack with String array below when there is an internal compiler available
+                return TargetDAG.DEFAULT
+                        .add("plugin").executor(new ByggTestPlugin()).predecessors(new String[] {"test"}).build();
             }
         };
     }
