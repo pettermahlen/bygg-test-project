@@ -4,6 +4,7 @@
  */
 
 import com.pettermahlen.bygg.configuration.ByggConfiguration;
+import com.pettermahlen.bygg.execution.TargetDAG;
 
 /**
  * TODO: document this class!
@@ -14,8 +15,8 @@ import com.pettermahlen.bygg.configuration.ByggConfiguration;
 public class Configuration {
     public static ByggConfiguration configuration() {
         return new ByggConfiguration() {
-            public String vardet() {
-                return "hej";
+            public TargetDAG getTargetDAG() {
+                return TargetDAG.DEFAULT;
             }
         };
     }
