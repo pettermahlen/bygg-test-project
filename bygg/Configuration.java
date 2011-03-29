@@ -17,9 +17,8 @@ public class Configuration {
     public static ByggConfiguration configuration() {
         return new ByggConfiguration() {
             public TargetDAG getTargetDAG() {
-                // TODO: fix Janino-varargs-hack with String array below when there is an internal compiler available
                 return TargetDAG.DEFAULT
-                        .add("plugin").executor(new ByggTestPlugin()).requires(new String[] {"test"}).build();
+                        .add("plugin").executor(new ByggTestPlugin()).requires("test").build();
             }
         };
     }

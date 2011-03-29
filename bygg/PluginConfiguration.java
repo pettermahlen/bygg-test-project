@@ -17,13 +17,13 @@ import java.util.List;
  */
 public class PluginConfiguration {
     public static Plugins plugins() {
-        final List artifactVersions = ImmutableList.builder()
-                .add(new ArtifactVersion(ProjectArtifacts.BYGG_TEST_PLUGIN, "1.0-SNAPSHOT"))
-                .add(new ArtifactVersion(ProjectArtifacts.GUICE, "2.0"))
-                .build();
+        final List<ArtifactVersion> artifactVersions = ImmutableList.of(
+                new ArtifactVersion(ProjectArtifacts.BYGG_TEST_PLUGIN, "1.0-SNAPSHOT"),
+                new ArtifactVersion(ProjectArtifacts.GUICE, "2.0")
+        );
 
         return new Plugins() {
-            public List plugins() {
+            public List<ArtifactVersion> plugins() {
                 return artifactVersions;
             }
         };
